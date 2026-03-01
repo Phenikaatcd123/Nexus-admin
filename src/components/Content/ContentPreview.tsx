@@ -1,4 +1,3 @@
-// src/components/Content/ContentPreview.tsx
 import React from 'react';
 import { ContentPage } from '../../types';
 import './ContentPreview.css';

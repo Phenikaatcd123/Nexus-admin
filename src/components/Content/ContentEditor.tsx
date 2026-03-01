@@ -405,6 +405,7 @@ const ContentEditor: React.FC<ContentEditorProps> = ({
                 <div className="form-group">
                   <label>Trạng thái</label>
                   <select
+                    aria-label="Trạng thái trang"
                     value={formData.status}
                     onChange={(e) => setFormData({
                       ...formData,

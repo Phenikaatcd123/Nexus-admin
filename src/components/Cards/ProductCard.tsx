@@ -1,4 +1,3 @@
-// src/components/Cards/ProductCard.tsx
 import React from 'react';
 import { Product } from '../../types';
 import './ProductCard.css';
