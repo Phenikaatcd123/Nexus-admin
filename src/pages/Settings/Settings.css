@@ -1,0 +1,120 @@
+/* src/pages/Settings/Settings.css */
+.settings {
+  padding: 20px;
+}
+
+.settings-table-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  margin-top: 24px;
+}
+
+.settings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.settings-table th {
+  text-align: left;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.settings-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.setting-key {
+  background: #f5f7fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #e83e8c;
+}
+
+.setting-description {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.setting-value {
+  min-width: 200px;
+}
+
+.display-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.display-value span {
+  font-weight: 500;
+  color: #1a1f2e;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.edit-btn:hover {
+  opacity: 1;
+  background: #f5f7fa;
+}
+
+.edit-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.edit-input,
+.edit-select {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #667eea;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.save-btn,
+.cancel-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.save-btn {
+  color: #2e7d32;
+}
+
+.save-btn:hover {
+  background: #e8f5e9;
+}
+
+.cancel-btn {
+  color: #c62828;
+}
+
+.cancel-btn:hover {
+  background: #ffebee;
+}

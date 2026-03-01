@@ -1,0 +1,227 @@
+/* Layout.css - Nexus Admin Layout Styles */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode */
+.dark .app-layout {
+  background-color: #1a1f2e;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px; /* Bằng với chiều rộng của sidebar */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease, background-color 0.3s ease;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 24px;
+  background-color: #f5f7fa;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Dark mode cho content */
+.dark .content-wrapper {
+  background-color: #1a1f2e;
+}
+
+/* Animation khi chuyển trang */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0; /* Sidebar sẽ ẩn hoặc thu gọn */
+  }
+  
+  .content-wrapper {
+    padding: 20px;
+  }
+}
+
+/* Mobile: < 768px */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 16px;
+  }
+}
+
+/* Mobile nhỏ: < 480px */
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 12px;
+  }
+}
+
+/* Scrollbar styling cho main content */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark mode scrollbar */
+.dark .main-content::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+.dark .main-content::-webkit-scrollbar-thumb {
+  background: #4a5568;
+}
+
+.dark .main-content::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* Print styles */
+@media print {
+  .app-layout {
+    background: white;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .content-wrapper {
+    padding: 0;
+    background: white;
+  }
+  
+  .sidebar {
+    display: none; /* Ẩn sidebar khi in */
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .content-wrapper {
+    border-left: 1px solid #000;
+  }
+  
+  .dark .content-wrapper {
+    border-left: 1px solid #fff;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .content-wrapper {
+    animation: none;
+  }
+  
+  .main-content {
+    transition: none;
+  }
+}
+
+/* Loading state cho content */
+.content-wrapper.loading {
+  position: relative;
+  min-height: 200px;
+}
+
+.content-wrapper.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e9ecef;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Empty state */
+.content-wrapper.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6c757d;
+  font-size: 16px;
+}
+
+/* Error state */
+.content-wrapper.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #dc3545;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive grid adjustments */
+@media (min-width: 1280px) {
+  .content-wrapper {
+    padding: 28px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .content-wrapper {
+    padding: 32px;
+  }
+}
+
+/* Smooth scrolling */
+.main-content {
+  scroll-behavior: smooth;
+}
+
+/* Focus visible for accessibility */
+.main-content:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: -2px;
+}
+
+/* Dark mode focus */
+.dark .main-content:focus-visible {
+  outline-color: #818cf8;
+}

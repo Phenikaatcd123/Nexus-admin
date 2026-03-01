@@ -1,0 +1,18 @@
+/* src/pages/Categories/CategoryManagement.css */
+.category-management {
+  padding: 20px;
+}
+
+.product-count {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.category-name {
+  font-weight: 500;
+  color: #1a1f2e;
+}

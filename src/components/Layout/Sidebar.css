@@ -1,0 +1,163 @@
+/* src/components/Layout/Sidebar.css */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background: white;
+  color: #1a1f2e;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  border-right: 1px solid #e9ecef;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid #e9ecef; /* Viền xám nhạt */
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 24px 0;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  color: #495057;  /* Chữ xám đậm */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 4px 8px;
+  border-radius: 8px;
+}
+
+.nav-item:hover {
+  background: #f8f9fa;  /* Màu xám rất nhạt khi hover */
+  color: #1a1f2e;        /* Chữ đen hơn khi hover */
+}
+
+.nav-item.active {
+  background: #f0f3ff;   /* Màu tím rất nhạt cho active */
+  color: #667eea;        /* Chữ tím cho active */
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.1);
+}
+
+.nav-icon {
+  margin-right: 12px;
+  font-size: 20px;
+  color: #6c757d;  /* Màu xám cho icon */
+}
+
+.nav-item.active .nav-icon {
+  color: #667eea;  /* Icon màu tím khi active */
+}
+
+.nav-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  padding: 24px;
+  border-top: 1px solid #e9ecef; /* Viền xám nhạt */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-right: 12px;
+  color: white;  /* Giữ chữ trắng trên nền gradient */
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1f2e;  /* Chữ đen */
+}
+
+.user-role {
+  font-size: 12px;
+  color: #6c757d;  /* Chữ xám */
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f8f9fa;  /* Nền xám nhạt */
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  color: #495057;  /* Chữ xám đậm */
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #e9ecef;  /* Nền xám đậm hơn khi hover */
+  border-color: #dee2e6;
+  color: #1a1f2e;  /* Chữ đen hơn khi hover */
+}
+
+.logout-btn span {
+  font-size: 16px;
+}
+
+/* Scrollbar styles cho sidebar */
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark .sidebar {
+  background: #2d3748;
+  color: #f7fafc;
+  border-right-color: #4a5568;
+}

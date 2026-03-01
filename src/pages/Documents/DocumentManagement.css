@@ -1,0 +1,21 @@
+/* src/pages/Documents/DocumentManagement.css */
+.document-management {
+  padding: 20px;
+}
+
+.document-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-icon {
+  font-size: 24px;
+}
+
+.file-type {
+  font-size: 11px;
+  color: #6c757d;
+  margin-top: 2px;
+  display: block;
+}
